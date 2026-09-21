@@ -1,0 +1,27 @@
+import numpy as np
+
+rows = int(input("Enter number of rows: "))
+columns = int(input("Enter number of columns: "))
+
+print("Enter elements of the first matrix:")
+A = np.array([
+    [int(input()) for j in range(columns)]
+    for i in range(rows)
+])
+
+print("Enter elements of the second matrix:")
+B = np.array([
+    [int(input()) for j in range(columns)]
+    for i in range(rows)
+])
+
+C = A + B
+
+print("\nFirst matrix:")
+print(A)
+
+print("\nSecond matrix:")
+print(B)
+
+print("\nSum of the two matrices:")
+print(C)
