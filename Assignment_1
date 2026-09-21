@@ -1,0 +1,41 @@
+# Student Data Management using Dictionary, Tuple and List
+
+# initial
+students = {
+    101: {
+        "details": ("Aarav", "CSE"),   # Tuple: (Name, Branch)
+        "marks": [85, 78, 90]          # List of marks
+    },
+    102: {
+        "details": ("Riya", "ECE"),
+        "marks": [88, 82, 79]
+    }
+}
+
+# 1. Add a new student record
+students[103] = {
+    "details": ("Kabir", "Mechanical"),
+    "marks": [75, 80, 72]
+}
+
+# 2. Delete an existing student record
+del students[102]
+
+# 3. Update the details of a student
+students[101]["details"] = ("Aarav Sharma", "AI and ML")
+students[101]["marks"] = [90, 87, 93]
+
+# 4. Display the final student records
+print("Final Student Records:\n")
+
+for roll_number, student in students.items():
+    name = student["details"][0]
+    branch = student["details"][1]
+    marks = student["marks"]
+
+    print("Roll Number:", roll_number)
+    print("Name:", name)
+    print("Branch:", branch)
+    print("Marks:", marks)
+    print("Average Marks:", sum(marks) / len(marks))
+    print()
